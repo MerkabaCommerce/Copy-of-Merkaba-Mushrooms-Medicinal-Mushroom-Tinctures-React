@@ -1133,6 +1133,7 @@ const Home = (props) => {
           @media (max-width: 479px) {
             .home-card {
               padding: var(--dl-space-space-halfunit);
+              margin-top: var(--dl-space-space-sixunits);
             }
             .home-text {
               font-size: 2.25rem;

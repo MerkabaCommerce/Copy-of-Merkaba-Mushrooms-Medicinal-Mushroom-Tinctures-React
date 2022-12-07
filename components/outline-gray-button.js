@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const OutlineGrayButton = (props) => {
   return (
     <>
-      <div className="outline-gray-button-container">
+      <div className={`outline-gray-button-container ${props.rootClassName} `}>
         <button className="outline-gray-button-button button ButtonSmall">
           {props.button}
         </button>
@@ -31,6 +31,16 @@ const OutlineGrayButton = (props) => {
             cursor: pointer;
             transform: scale(1.02);
           }
+
+          @media (max-width: 479px) {
+            .outline-gray-button-root-class-name {
+              align-self: flex-start;
+              margin-top: 0px;
+              margin-left: var(--dl-space-space-halfunit);
+              margin-right: 0px;
+              margin-bottom: 0px;
+            }
+          }
         `}
       </style>
     </>
@@ -39,10 +49,12 @@ const OutlineGrayButton = (props) => {
 
 OutlineGrayButton.defaultProps = {
   button: 'Button',
+  rootClassName: '',
 }
 
 OutlineGrayButton.propTypes = {
   button: PropTypes.string,
+  rootClassName: PropTypes.string,
 }
 
 export default OutlineGrayButton

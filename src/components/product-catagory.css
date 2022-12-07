@@ -1,0 +1,27 @@
+.product-catagory-container {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-catagory-container1 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-catagory-container2 {
+  flex: 0 0 auto;
+  width: 1200PX;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}

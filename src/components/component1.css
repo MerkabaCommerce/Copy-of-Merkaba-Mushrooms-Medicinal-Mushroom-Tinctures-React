@@ -1,0 +1,16 @@
+.component1-container {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: var(--dl-radius-radius-radius75);
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(310deg,#7928ca,#ff0080);
+}
+.component1-image {
+  width: auto;
+  object-fit: cover;
+}

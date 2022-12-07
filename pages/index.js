@@ -1138,6 +1138,9 @@ const Home = (props) => {
               padding: var(--dl-space-space-halfunit);
               margin-top: var(--dl-space-space-sixunits);
             }
+            .home-container02 {
+              width: 80%;
+            }
             .home-text {
               font-size: 2.25rem;
               align-self: center;

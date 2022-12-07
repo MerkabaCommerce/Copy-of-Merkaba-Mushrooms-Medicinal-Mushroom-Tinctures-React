@@ -14,56 +14,48 @@ const Header = (props) => {
       >
         <nav className="header-nav">
           <div className="header-container">
-            <div className="header-container1">
-              <Link href="/">
-                <a className="header-link">
+            <Link href="/">
+              <a className="header-link">
+                <div className="header-container1">
                   <img
                     alt={props.image_alt}
                     src={props.image_src}
                     className="header-image"
                   />
-                </a>
-              </Link>
-              <Link href="/">
-                <a className="header-link01">Merkaba Mushrooms</a>
-              </Link>
-            </div>
+                  <span className="header-text">Merkaba Mushrooms</span>
+                </div>
+              </a>
+            </Link>
             <div className="header-menu">
               <Link href="/about-us">
-                <a className="header-link02">
-                  <span className="Large header-text">About Us</span>
+                <a className="header-link01">
+                  <span className="Large header-text1">About Us</span>
                   <br></br>
                 </a>
               </Link>
               <Link href="/coming-soon">
-                <a className="header-link03 Large">Coming Soon</a>
+                <a className="header-link02 Large">Coming Soon</a>
               </Link>
               <Link href="/learn">
-                <a className="header-link04 Large">Learn</a>
+                <a className="header-link03 Large">Learn</a>
               </Link>
-              <a
-                href="https://store-1.vercel.app/shop#!/~/"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="header-link05"
-              >
-                <span className="Large header-text2">Shop</span>
-                <br></br>
-              </a>
+              <Link href="/shop">
+                <a className="header-link04">
+                  <span className="Large header-text3">Shop</span>
+                  <br></br>
+                </a>
+              </Link>
             </div>
             <div className="header-container2">
               <div className="header-container3">
-                <a
-                  href="https://store-1.vercel.app/shop#!/~/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="header-link06"
-                >
-                  <PrimaryPinkButton
-                    button="buy now"
-                    className="header-component"
-                  ></PrimaryPinkButton>
-                </a>
+                <Link href="/shop">
+                  <a className="header-link05">
+                    <PrimaryPinkButton
+                      button="buy now"
+                      className="header-component"
+                    ></PrimaryPinkButton>
+                  </a>
+                </Link>
               </div>
               <div data-role="BurgerMenu" className="header-burger-menu">
                 <svg viewBox="0 0 1024 1024" className="header-icon">
@@ -75,9 +67,20 @@ const Header = (props) => {
         </nav>
         <div data-role="MobileMenu" className="header-mobile-menu">
           <div className="header-top">
-            <Link href="/">
-              <a className="header-link07 Large">Soft UI Design System</a>
-            </Link>
+            <div className="header-container4">
+              <Link href="/">
+                <a className="header-link06">
+                  <img
+                    alt={props.image_alt1}
+                    src="/playground_assets/asset%2011-200w.png"
+                    className="header-image1"
+                  />
+                </a>
+              </Link>
+              <Link href="/">
+                <a className="header-link08 Large">Merkaba Mushroom</a>
+              </Link>
+            </div>
             <div data-role="CloseMobileMenu" className="header-close-menu">
               <svg viewBox="0 0 1024 1024" className="header-icon2">
                 <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
@@ -87,18 +90,25 @@ const Header = (props) => {
           <div className="header-mid">
             <div className="header-menu1">
               <Link href="/">
-                <a className="header-link08 Large">Home</a>
+                <a className="header-link09 Large">Home</a>
               </Link>
               <Link href="/about-us">
-                <a className="header-link09 Large">Profile</a>
+                <a className="header-link10 Large">Profile</a>
               </Link>
               <Link href="/coming-soon">
-                <a className="header-link10 Large">Coming Soon</a>
+                <a className="header-link11 Large">Coming Soon</a>
               </Link>
             </div>
           </div>
           <div className="header-bot">
-            <PrimaryPinkButton button="buy now"></PrimaryPinkButton>
+            <Link href="/shop">
+              <a className="header-link12">
+                <PrimaryPinkButton
+                  button="buy now"
+                  className="header-component1"
+                ></PrimaryPinkButton>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -147,34 +157,47 @@ const Header = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
+          .header-link {
+            display: contents;
+          }
           .header-container1 {
             flex: 0 0 auto;
             width: auto;
             height: auto;
             display: flex;
             align-items: flex-start;
-          }
-          .header-link {
-            display: contents;
+            text-decoration: none;
           }
           .header-image {
             width: auto;
             object-fit: cover;
-            text-decoration: none;
           }
-          .header-link01 {
+          .header-text {
             color: var(--dl-color-secondary-700);
             align-self: center;
             font-weight: 600;
             margin-left: var(--dl-space-space-unit);
             margin-right: var(--dl-space-space-unit);
-            text-decoration: none;
           }
           .header-menu {
             flex: 0 0 auto;
             display: flex;
             align-items: flex-start;
             flex-direction: row;
+          }
+          .header-link01 {
+            margin-top: var(--dl-space-space-halfunit);
+            transition: 0.3s;
+            margin-left: var(--dl-space-space-unit);
+            margin-right: var(--dl-space-space-unit);
+            margin-bottom: var(--dl-space-space-halfunit);
+            text-decoration: none;
+          }
+          .header-link01:hover {
+            color: var(--dl-color-gray-500);
+          }
+          .header-text1:hover {
+            color: var(--dl-color-gray-500);
           }
           .header-link02 {
             margin-top: var(--dl-space-space-halfunit);
@@ -185,9 +208,6 @@ const Header = (props) => {
             text-decoration: none;
           }
           .header-link02:hover {
-            color: var(--dl-color-gray-500);
-          }
-          .header-text:hover {
             color: var(--dl-color-gray-500);
           }
           .header-link03 {
@@ -212,18 +232,7 @@ const Header = (props) => {
           .header-link04:hover {
             color: var(--dl-color-gray-500);
           }
-          .header-link05 {
-            margin-top: var(--dl-space-space-halfunit);
-            transition: 0.3s;
-            margin-left: var(--dl-space-space-unit);
-            margin-right: var(--dl-space-space-unit);
-            margin-bottom: var(--dl-space-space-halfunit);
-            text-decoration: none;
-          }
-          .header-link05:hover {
-            color: var(--dl-color-gray-500);
-          }
-          .header-text2:hover {
+          .header-text3:hover {
             color: var(--dl-color-gray-500);
           }
           .header-container2 {
@@ -238,7 +247,7 @@ const Header = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .header-link06 {
+          .header-link05 {
             display: contents;
           }
           .header-component {
@@ -278,7 +287,25 @@ const Header = (props) => {
             flex-direction: row;
             justify-content: space-between;
           }
-          .header-link07 {
+          .header-container4 {
+            flex: 0 0 auto;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+          }
+          .header-link06 {
+            display: contents;
+          }
+          .header-image1 {
+            width: 56px;
+            height: 46px;
+            object-fit: contain;
+            text-decoration: none;
+          }
+          .header-link08 {
             color: var(--dl-color-secondary-700);
             font-weight: 600;
             text-decoration: none;
@@ -309,14 +336,6 @@ const Header = (props) => {
             margin-bottom: var(--dl-space-space-unit);
             flex-direction: column;
           }
-          .header-link08 {
-            transition: 0.3s;
-            margin-bottom: var(--dl-space-space-halfunit);
-            text-decoration: none;
-          }
-          .header-link08:hover {
-            color: var(--dl-color-gray-500);
-          }
           .header-link09 {
             transition: 0.3s;
             margin-bottom: var(--dl-space-space-halfunit);
@@ -327,9 +346,17 @@ const Header = (props) => {
           }
           .header-link10 {
             transition: 0.3s;
+            margin-bottom: var(--dl-space-space-halfunit);
             text-decoration: none;
           }
           .header-link10:hover {
+            color: var(--dl-color-gray-500);
+          }
+          .header-link11 {
+            transition: 0.3s;
+            text-decoration: none;
+          }
+          .header-link11:hover {
             color: var(--dl-color-gray-500);
           }
           .header-bot {
@@ -337,6 +364,12 @@ const Header = (props) => {
             display: flex;
             margin-top: auto;
             flex-direction: column;
+          }
+          .header-link12 {
+            display: contents;
+          }
+          .header-component1 {
+            text-decoration: none;
           }
 
           @media (max-width: 991px) {
@@ -374,12 +407,16 @@ Header.defaultProps = {
   image_src: '/playground_assets/merkaba%20mushrooms%20logo-200w.png',
   image_alt: 'image',
   rootClassName: '',
+  image_src1: 'https://play.teleporthq.io/static/svg/default-img.svg',
+  image_alt1: 'image',
 }
 
 Header.propTypes = {
   image_src: PropTypes.string,
   image_alt: PropTypes.string,
   rootClassName: PropTypes.string,
+  image_src1: PropTypes.string,
+  image_alt1: PropTypes.string,
 }
 
 export default Header

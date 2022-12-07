@@ -34,8 +34,8 @@ const Home = (props) => {
                     alt="image"
                     className="home-image"
                   />
+                  <h1 className="home-text01">Double Extracted Tinctures</h1>
                 </div>
-                <h1 className="home-text01">Double Extracted Tinctures</h1>
                 <h2 className="home-text02">
                   <span className="HeadingOne">A New Way to Cultivate </span>
                   <span className="HeadingOne">Your Mind and Body</span>
@@ -1070,9 +1070,12 @@ const Home = (props) => {
               display: flex;
               align-self: center;
               align-items: center;
+              flex-direction: row;
+              justify-content: center;
             }
             .home-text01 {
               align-self: center;
+              text-align: left;
             }
             .home-text02 {
               text-align: center;
@@ -1152,13 +1155,14 @@ const Home = (props) => {
             }
             .home-container03 {
               align-self: center;
-              align-items: center;
-              flex-direction: column;
+              align-items: flex-start;
+              flex-direction: row;
+              justify-content: center;
             }
             .home-text01 {
               font-size: 1.3rem;
               align-self: center;
-              text-align: center;
+              text-align: left;
               font-family: Italiana;
               font-weight: 700;
               line-height: 1.3;

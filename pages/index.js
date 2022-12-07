@@ -1176,6 +1176,7 @@ const Home = (props) => {
             }
             .home-text02 {
               color: var(--dl-color-secondary-700);
+              font-size: 2rem;
               align-self: center;
               text-align: center;
             }

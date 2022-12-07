@@ -39,23 +39,19 @@ const Header = (props) => {
               <Link href="/learn">
                 <a className="header-link03 Large">Learn</a>
               </Link>
-              <Link href="/shop">
-                <a className="header-link04">
-                  <span className="Large header-text3">Shop</span>
-                  <br></br>
-                </a>
-              </Link>
+              <a href={props.shoplink_component} className="header-link04">
+                <span className="Large header-text3">Shop</span>
+                <br></br>
+              </a>
             </div>
             <div className="header-container2">
               <div className="header-container3">
-                <Link href="/shop">
-                  <a className="header-link05">
-                    <PrimaryPinkButton
-                      button="buy now"
-                      className="header-component"
-                    ></PrimaryPinkButton>
-                  </a>
-                </Link>
+                <a href={props.shoplink_component} className="header-link05">
+                  <PrimaryPinkButton
+                    button="buy now"
+                    className="header-component"
+                  ></PrimaryPinkButton>
+                </a>
               </div>
               <div data-role="BurgerMenu" className="header-burger-menu">
                 <svg viewBox="0 0 1024 1024" className="header-icon">
@@ -101,14 +97,9 @@ const Header = (props) => {
             </div>
           </div>
           <div className="header-bot">
-            <Link href="/shop">
-              <a className="header-link12">
-                <PrimaryPinkButton
-                  button="buy now"
-                  className="header-component1"
-                ></PrimaryPinkButton>
-              </a>
-            </Link>
+            <a href={props.shoplink_component} className="header-link12">
+              <PrimaryPinkButton button="buy now"></PrimaryPinkButton>
+            </a>
           </div>
         </div>
       </div>
@@ -227,7 +218,6 @@ const Header = (props) => {
             margin-left: var(--dl-space-space-unit);
             margin-right: var(--dl-space-space-unit);
             margin-bottom: var(--dl-space-space-halfunit);
-            text-decoration: none;
           }
           .header-link04:hover {
             color: var(--dl-color-gray-500);
@@ -368,9 +358,6 @@ const Header = (props) => {
           .header-link12 {
             display: contents;
           }
-          .header-component1 {
-            text-decoration: none;
-          }
 
           @media (max-width: 991px) {
             .header-nav {
@@ -409,6 +396,7 @@ Header.defaultProps = {
   rootClassName: '',
   image_src1: 'https://play.teleporthq.io/static/svg/default-img.svg',
   image_alt1: 'image',
+  shoplink_component: 'https://merkaba-mushrooms-next-js.vercel.app/shop#!/',
 }
 
 Header.propTypes = {
@@ -417,6 +405,7 @@ Header.propTypes = {
   rootClassName: PropTypes.string,
   image_src1: PropTypes.string,
   image_alt1: PropTypes.string,
+  shoplink_component: PropTypes.string,
 }
 
 export default Header
